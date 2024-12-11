@@ -123,66 +123,409 @@
 
           </div>
 
-          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input 
-                    type="text" 
-                    name="name" 
-                    class="form-control" 
-                    id="name" 
-                    placeholder="Nome" 
-                    required
-                  >
+          <section id="register" class="register">
+            <div class="container">
+              <div class="row mt-5">
+                <div class="col-lg-8 offset-lg-2" data-aos="fade-up">
+                  <h2 class="text-center">Cadastro de Cliente</h2>
+                  <p class="text-center">Preencha os campos abaixo para criar sua conta.</p>
+                  <form action="/submit" method="post" enctype="multipart/form-data" class="php-email-form">
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="fullName">Nome Completo *</label>
+                        <input 
+                          type="text" 
+                          id="fullName" 
+                          name="fullName" 
+                          class="form-control" 
+                          placeholder="Digite seu nome completo" 
+                          required
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="dob">Data de Nascimento *</label>
+                        <input 
+                          type="date" 
+                          id="dob" 
+                          name="dob" 
+                          class="form-control" 
+                          required
+                        >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="cpfCnpj">CPF/CNPJ *</label>
+                        <input 
+                          type="text" 
+                          id="cpfCnpj" 
+                          name="cpfCnpj" 
+                          class="form-control" 
+                          placeholder="Digite seu CPF ou CNPJ" 
+                          required 
+                          pattern="\d{11}|\d{14}" 
+                          title="Insira um CPF (11 dígitos) ou CNPJ (14 dígitos) válido."
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="phone">Telefone *</label>
+                        <input 
+                          type="tel" 
+                          id="phone" 
+                          name="phone" 
+                          class="form-control" 
+                          placeholder="(00) 00000-0000" 
+                          required 
+                          pattern="\d{10,11}" 
+                          title="Insira um número de telefone válido."
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">E-mail *</label>
+                      <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-control" 
+                        placeholder="Digite seu e-mail" 
+                        required
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="address">Endereço *</label>
+                      <input 
+                        type="text" 
+                        id="address" 
+                        name="address" 
+                        class="form-control" 
+                        placeholder="Digite seu endereço" 
+                        required
+                      >
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="password">Senha *</label>
+                        <input 
+                          type="password" 
+                          id="password" 
+                          name="password" 
+                          class="form-control" 
+                          placeholder="Digite sua senha" 
+                          required
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="confirmPassword">Confirmar Senha *</label>
+                        <input 
+                          type="password" 
+                          id="confirmPassword" 
+                          name="confirmPassword" 
+                          class="form-control" 
+                          placeholder="Confirme sua senha" 
+                          required
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="documentUpload">Upload de Documento (RG ou CNH) *</label>
+                      <input 
+                        type="file" 
+                        id="documentUpload" 
+                        name="documentUpload" 
+                        class="form-control" 
+                        accept=".png, .jpeg, .jpg" 
+                        required
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="profilePicture">Foto do Perfil *</label>
+                      <input 
+                        type="file" 
+                        id="profilePicture" 
+                        name="profilePicture" 
+                        class="form-control" 
+                        accept=".png, .jpeg, .jpg" 
+                        required
+                      >
+                    </div>
+                    <div class="text-center mt-3">
+                      <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                  </form>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input 
-                    type="email" 
-                    class="form-control" 
-                    name="email" 
-                    id="email" 
-                    placeholder="Email" 
-                    required
-                  >
+              </div>
+            </div>
+          </section>
+          <section id="register" class="register">
+            <div class="container">
+              <div class="row mt-5">
+                <div class="col-lg-8 offset-lg-2" data-aos="fade-up">
+                  <h2 class="text-center">Cadastro de Cliente</h2>
+                  <p class="text-center">Preencha os campos abaixo para criar sua conta.</p>
+                  <form action="/submit" method="post" enctype="multipart/form-data" class="php-email-form">
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="fullName">Nome Completo *</label>
+                        <input 
+                          type="text" 
+                          id="fullName" 
+                          name="fullName" 
+                          class="form-control" 
+                          placeholder="Digite seu nome completo" 
+                          required
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="dob">Data de Nascimento *</label>
+                        <input 
+                          type="date" 
+                          id="dob" 
+                          name="dob" 
+                          class="form-control" 
+                          required
+                        >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="cpfCnpj">CPF/CNPJ *</label>
+                        <input 
+                          type="text" 
+                          id="cpfCnpj" 
+                          name="cpfCnpj" 
+                          class="form-control" 
+                          placeholder="Digite seu CPF ou CNPJ" 
+                          required 
+                          pattern="\d{11}|\d{14}" 
+                          title="Insira um CPF (11 dígitos) ou CNPJ (14 dígitos) válido."
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="phone">Telefone *</label>
+                        <input 
+                          type="tel" 
+                          id="phone" 
+                          name="phone" 
+                          class="form-control" 
+                          placeholder="(00) 00000-0000" 
+                          required 
+                          pattern="\d{10,11}" 
+                          title="Insira um número de telefone válido."
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">E-mail *</label>
+                      <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-control" 
+                        placeholder="Digite seu e-mail" 
+                        required
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="address">Endereço *</label>
+                      <input 
+                        type="text" 
+                        id="address" 
+                        name="address" 
+                        class="form-control" 
+                        placeholder="Digite seu endereço" 
+                        required
+                      >
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="password">Senha *</label>
+                        <input 
+                          type="password" 
+                          id="password" 
+                          name="password" 
+                          class="form-control" 
+                          placeholder="Digite sua senha" 
+                          required
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="confirmPassword">Confirmar Senha *</label>
+                        <input 
+                          type="password" 
+                          id="confirmPassword" 
+                          name="confirmPassword" 
+                          class="form-control" 
+                          placeholder="Confirme sua senha" 
+                          required
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="documentUpload">Upload de Documento (RG ou CNH) *</label>
+                      <input 
+                        type="file" 
+                        id="documentUpload" 
+                        name="documentUpload" 
+                        class="form-control" 
+                        accept=".png, .jpeg, .jpg" 
+                        required
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="profilePicture">Foto do Perfil *</label>
+                      <input 
+                        type="file" 
+                        id="profilePicture" 
+                        name="profilePicture" 
+                        class="form-control" 
+                        accept=".png, .jpeg, .jpg" 
+                        required
+                      >
+                    </div>
+                    <div class="text-center mt-3">
+                      <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <div class="form-group mt-3">
-                <input 
-                  type="text" 
-                  class="form-control" 
-                  name="subject" 
-                  id="subject" 
-                  placeholder="Assunto" 
-                  required
-                >
+            </div>
+          </section>
+          <section id="register" class="register">
+            <div class="container">
+              <div class="row mt-5">
+                <div class="col-lg-8 offset-lg-2" data-aos="fade-up">
+                  <h2 class="text-center">Cadastro de Cliente</h2>
+                  <p class="text-center">Preencha os campos abaixo para criar sua conta.</p>
+                  <form action="/submit" method="post" enctype="multipart/form-data" class="php-email-form">
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="fullName">Nome Completo *</label>
+                        <input 
+                          type="text" 
+                          id="fullName" 
+                          name="fullName" 
+                          class="form-control" 
+                          placeholder="Digite seu nome completo" 
+                          required
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="dob">Data de Nascimento *</label>
+                        <input 
+                          type="date" 
+                          id="dob" 
+                          name="dob" 
+                          class="form-control" 
+                          required
+                        >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="cpfCnpj">CPF/CNPJ *</label>
+                        <input 
+                          type="text" 
+                          id="cpfCnpj" 
+                          name="cpfCnpj" 
+                          class="form-control" 
+                          placeholder="Digite seu CPF ou CNPJ" 
+                          required 
+                          pattern="\d{11}|\d{14}" 
+                          title="Insira um CPF (11 dígitos) ou CNPJ (14 dígitos) válido."
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="phone">Telefone *</label>
+                        <input 
+                          type="tel" 
+                          id="phone" 
+                          name="phone" 
+                          class="form-control" 
+                          placeholder="(00) 00000-0000" 
+                          required 
+                          pattern="\d{10,11}" 
+                          title="Insira um número de telefone válido."
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">E-mail *</label>
+                      <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-control" 
+                        placeholder="Digite seu e-mail" 
+                        required
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="address">Endereço *</label>
+                      <input 
+                        type="text" 
+                        id="address" 
+                        name="address" 
+                        class="form-control" 
+                        placeholder="Digite seu endereço" 
+                        required
+                      >
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="password">Senha *</label>
+                        <input 
+                          type="password" 
+                          id="password" 
+                          name="password" 
+                          class="form-control" 
+                          placeholder="Digite sua senha" 
+                          required
+                        >
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="confirmPassword">Confirmar Senha *</label>
+                        <input 
+                          type="password" 
+                          id="confirmPassword" 
+                          name="confirmPassword" 
+                          class="form-control" 
+                          placeholder="Confirme sua senha" 
+                          required
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="documentUpload">Upload de Documento (RG ou CNH) *</label>
+                      <input 
+                        type="file" 
+                        id="documentUpload" 
+                        name="documentUpload" 
+                        class="form-control" 
+                        accept=".png, .jpeg, .jpg" 
+                        required
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="profilePicture">Foto do Perfil *</label>
+                      <input 
+                        type="file" 
+                        id="profilePicture" 
+                        name="profilePicture" 
+                        class="form-control" 
+                        accept=".png, .jpeg, .jpg" 
+                        required
+                      >
+                    </div>
+                    <div class="text-center mt-3">
+                      <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                  </form>
+                </div>
               </div>
-              <div class="form-group mt-3">
-                <textarea 
-                  class="form-control" 
-                  name="message" 
-                  rows="5"
-                  placeholder="Mensagem" 
-                  required>
-                </textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Carregando...</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!--END -SECTION - CONTACT-->
-
-  </main>  <!--END - MAIN-->
+            </div>
+          </section>
+                                <!--END - MAIN-->
 
    <!--START - FOOTER-->
    <footer id="footer">
