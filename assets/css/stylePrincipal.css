@@ -134,6 +134,24 @@
         color: #6d3c84;
         margin-top: 20px;
     }
+    button {
+        cursor: pointer;
+        width: 120px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        background: slateblue;
+    }
+    input {
+        width: 30%;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid silver;
+        outline: none;
+        font-weight: 600;
+        color: #1c1c1c;
+        padding-left: 3px;
+    }
 
     footer {
         text-align: center;
@@ -144,3 +162,34 @@
         background-color:#6d3c84;
         color: #fff;
     }
+    #divBusca{
+        background-color:#E0EEEE;
+        border:solid 2px #5F9EA0;
+        border-radius:10px;
+        width:300px;
+        height:32px;
+      }
+      
+      #txtBusca{
+        float:left;
+        background-color:transparent;
+        padding-left:5px;
+        font-size:18px;
+        border:none;
+        height:32px;
+        width:191px;
+      }
+      
+      #btnBusca{
+        border:none;
+        float:left;
+        height:32px;
+        border-radius:0 7px 7px 0;
+        width:70px;
+        font-weight:bold;
+        background:#5F9EA0;
+      }
+      
+      #divBusca img{
+        float:left;
+      }
