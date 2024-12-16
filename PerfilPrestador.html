@@ -6,6 +6,10 @@
     <title>Prestado </title>
     <!-- Carregamento de fontes do Google -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,500,600,700" rel="stylesheet">
+      <!-- Vendor CSS Files -->
+  <!--Links-->
+  
+
 
       <!-- Arquivo CSS principal do template -->
   <link href="assets/css/stylePrincipal.css" rel="stylesheet">
@@ -23,7 +27,7 @@
         <!-- Menu de navegação alinhado à direita -->
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a class="active" href="FormBuscarPrestador.html">Buscar</a></li>
                 <li><a href="Servicos.html">Serviços</a></li>
                 <li><a href="CadUsuario.html">Crie sua conta</a></li>
                 <li><a href="Login.html">Entre</a></li>
@@ -41,7 +45,7 @@
             <h2>Minha Conta</h2>
             <nav>
                 <ul>
-                    <li><a href="#">Compras</a></li>
+                    <li><a href="#">Buscar</a></li>
                     <li><a href="#">Vendas</a></li>
                     <li><a href="#">Empréstimos</a></li>
                     <li><a href="#">Assinaturas</a></li>
@@ -54,28 +58,44 @@
         </aside>
 
         <!-- Conteúdo principal -->
+       
         <main class="conteudo">
+            <p>*Complete o seu Cadastro</p>
             <div class="perfil">
                 <img src="assets/img/fotoPerfil.png" alt="Foto do Perfil">
                 
             </div>
             <div class="informacoes">
-                <h2>Erivan Mendes</h2>
-                <p>Email: contatoerivan.ms@gmail.com</p>
-                <h3>Suas Informações</h3>
-                <p>Nome de preferência e dados para te identificar.</p>
-                <h3>Dados da sua Conta</h3>
-                <p>Dados que representam sua conta no Mercado Livre.</p>
-                <h3>Segurança</h3>
+                <h2>Nome Completo</h2>
+                <p>Erivan Mendes</p>
+                <h2>CPF/CNPJ</h2>
+                <p>004.569.856-88</p>
+                <h2>Data de Nascimento</h2>
+                <p>09/12/1993</p>
+                <h2>Telefone</h2>
+                <p>(61) 99999-9999</p>
+                <h2>E-mail</h2>
+                <p>contatoerivan.ms@gmail.com</p>
+                <h2>Endereço</h2>
+                <p>Rua 5 quadra 22 lt 6 Brasilia-DF</p>
+              
+                <div class="form-group">
+                    <label for="documentUpload" class="tn btn-secondary">Upload de Documento (RG ou CNH) *</label>
+                    <input  type="file" id="documentUpload" name="documentUpload" class="form-control" accept=".png, .jpeg, .jpg" required >
+                    <div class="text-center mt-3">
+                        <br>
+                        
+                            <a href="PerfilAlteraP.html"> <button type="submit" class="tn btn-secondary">Alterar</button> </a>
+                      </div>
             </div>
         </main>
     </div>
     <!-- FIM - CONTAINER PRINCIPAL -->
 
-    <!-- INÍCIO - RODAPÉ -->
+    <!-- INÍCIO - RODAPÉ 
     <footer>
         <p>Chama Serviço Todos os direitos reservados </p>
     </footer>
-    <!-- FIM - RODAPÉ -->
+     FIM - RODAPÉ -->
 </body>
 </html>
