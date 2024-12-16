@@ -1,124 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt=br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <style>
-    /* Estilo da tela de login */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #6a0dad; /* Roxo */
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      color: white;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
 
-    .login-container {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      width: 100%;
-      max-width: 400px;
-      padding: 20px;
-      text-align: center;
-      color: #6a0dad; /* Roxo */
-    }
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/styleLogin.css">
+    <link rel="stylesheet" href="assets/css/mediaLogin.css">
 
-    .login-container h1 {
-      margin-bottom: 20px;
-    }
-
-    .input-group {
-      margin-bottom: 15px;
-    }
-
-    .input-group input {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .button-group button {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #ffa500; /* Laranja */
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .google-login {
-      background: none; /* Remove o fundo */
-      color: #db4437; /* Vermelho Google */
-      border: 2px solid #db4437; /* Borda Vermelha Google */
-      font-size: 16px;
-    }
-
-    .google-login:hover {
-      background-color: #f5f5f5; /* Fundo leve ao passar o mouse */
-    }
-  </style>
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!--JS & jQuery-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="login-container">
-    <h1>Login</h1>
-    <div class="input-group">
-      <input type="text" id="username" placeholder="Usuário" required>
-    </div>
-    <div class="input-group">
-      <input type="password" id="password" placeholder="Senha" required>
-    </div>
-    <div class="input-group">
-      <p>Esqueci Senha</p>
-    </div>
-    <div class="button-group">
-      <button onclick="redirectUser('prestador')">Logar</button>
-      <button class="google-login" id="googleSignIn">Logar com Google</button>
-    </div>
-  </div>
 
-  <script>
-    function redirectUser(userType) {
-      if (userType === 'prestador') {
-        window.location.href = "contratante.html"; // Página para prestador
-      } else if (userType === 'cliente') {
-        window.location.href = "index.html"; // Página para cliente
-      }
-    }
 
-    // Configurar o botão de login do Google
-    window.onload = function () {
-      google.accounts.id.initialize({
-        client_id: "SUA_CLIENT_ID_AQUI", // Substitua pelo seu CLIENT_ID do Google Cloud Console
-        callback: handleGoogleSignIn
-      });
-      google.accounts.id.renderButton(
-        document.getElementById("googleSignIn"),
-        { theme: "outline", size: "large" } // Personalização do botão
-      );
-    };
 
-    function handleGoogleSignIn(response) {
-      console.log("Credenciais do Google", response);
-      // Redirecionar ou tratar o token JWT recebido
-    }
-  </script>
+  
+    <div id="container">
+        <div class="banner">
+            <img src="assets/img/login.png" alt="imagem-login">
+            <p style="color: #fff; font-weight: 400;">
+                Seja bem vindo, acesse e aproveite todo o conteúdo,
+                <br>somos uma equipe de profissionais empenhados em
+                <br>trazer o melhor conteúdo direcionado a você, usuário. 
+            </p>
+        </div>
+
+        <div class="box-login">
+            <h1>
+                Olá!<br>
+                Seja bem-vindo de volta.
+            </h1>
+
+            <div class="box">
+                <h2>faça o seu login agora</h2>
+                <input type="text" name="username" id="username" placeholder="E-mail">
+                <input type="password" name="password" id="password" placeholder="Senha">
+                
+                <a href="password.html">
+                    <p>Esqueceu a sua senha?</p>
+                </a>
+
+                <button>Login</button>
+                
+                <a href="CadUsuario.html">
+                    <p>Criar uma conta</p>
+                </a>
+
+                <div class="social">
+                    <img src="assets/img/facebook.png" alt="facebook">
+                    <img src="assets/img/google.png" alt="google">
+                    <img src="assets/img/twitter.png" alt="twitter">
+                    <img src="assets/img/github.png" alt="github">
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="PerfilPrestador.html">
+      <div id="bubble">
+          <img src="assets/img/user.png" alt="icone-usuário" title="fazer-login">
+      </div>
+  </a>
+  <script type="text/javascript" src="assets/js/validarLogin.js" defer></script>
+
 </body>
 </html>
