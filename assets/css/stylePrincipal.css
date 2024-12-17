@@ -193,6 +193,54 @@ form.form-editar {
     border-color: #6a2c7c; /* Cor roxa ao focar */
     box-shadow: 0 0 5px rgba(106, 44, 124, 0.2);
 }
+#menu-header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6a2c7c;
+    padding: 10px 20px;
+}
+.menu-logo1 img {
+    height: 50px;
+}
+.menu-navbar1 ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-navbar1 ul li {
+    margin-left: 20px;
+}
+
+.menu-navbar1 ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-navbar1 ul li a:hover,
+.menu-navbar1 ul li a.active {
+    color: #f8b400;
+}
+/* Responsividade do cabeçalho */
+@media (max-width: 768px) {
+    #menu-header1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-navbar1 ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-navbar1 ul li {
+        margin-left: 0;
+    }
+}
 
    /* footer {
         text-align: center;
