@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Prestadores</title>
+    <link rel="stylesheet" href="assets/css/busarServico.css"> <!-- Link para CSS externo -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+</head>
+<body>
+    <!-- INÍCIO - CABEÇALHO -->
+    <header id="menu-header1">
+        <!-- Logotipo alinhado à esquerda -->
+        <div class="menu-logo1">
+            <a href="index.html">
+                <img src="assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <!-- Menu de navegação alinhado à direita -->
+        <nav id="menu-navbar1" class="menu-navbar1">
+            <ul>
+                <li><a class="active" href="FormBuscarPrestador.html">Buscar</a></li>
+                <li><a href="Servicos.html">Serviços</a></li>
+                <li><a href="CadUsuario.html">Atualizar Dados</a></li>
+                <li><a href="Login.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIM - CABEÇALHO -->
+
+
+
+    <!-- Container Principal -->
+    <main class="container">
+        <h1>Buscar Prestadores e Serviços</h1>
+        
+        <!-- Filtros -->
+        <form id="filtro-servicos" class="form-filtros">
+            <div class="filtro-item">
+                <label for="localizacao">Localização:</label>
+                <input type="text" id="localizacao" placeholder="Bairro, Cidade ou Raio geográfico">
+            </div>
+            <div class="filtro-item">
+                <label for="preco">Faixa de Preço:</label>
+                <input type="number" id="preco-min" placeholder="Mínimo">
+                <input type="number" id="preco-max" placeholder="Máximo">
+            </div>
+            <div class="filtro-item">
+                <label for="avaliacao">Avaliações:</label>
+                <select id="avaliacao">
+                    <option value="">Todas</option>
+                    <option value="4">4+ Estrelas</option>
+                    <option value="3">3+ Estrelas</option>
+                    <option value="2">2+ Estrelas</option>
+                </select>
+            </div>
+            <div class="filtro-item">
+                <label for="categoria">Categoria do Serviço:</label>
+                <select id="categoria">
+                    <option value="">Escolha uma Categoria</option>
+                    <option value="Eletricista">Eletricista</option>
+                    <option value="Encanador">Encanador</option>
+                    <option value="Faxina">Faxina</option>
+                </select>
+            </div>
+            <div class="filtro-item">
+                <label for="servico">Serviço:</label>
+                <input type="text" id="servico" placeholder="Nome do Serviço">
+            </div>
+            <button type="submit" class="btn-filtrar">Filtrar</button>
+        </form>
+
+        <!-- Lista de Prestadores -->
+        <section id="resultado-servicos" class="resultado">
+            <h2>Resultados</h2>
+            <!-- Um card de exemplo -->
+            <div class="card-prestador">
+                <img src="assets/img/fotoPerfil.png" alt="Foto do Prestador" class="foto-prestador">
+                <div class="info-prestador">
+                    <h3>João Silva</h3>
+                    <p>Avaliação: ⭐ 4.5 (50 avaliações)</p>
+                    <p>Preço sugerido: R$ 150,00</p>
+                    <p>Atende: Brasília-DF</p>
+                    <button class="btn-detalhes">Ver Perfil</button>
+                </div>
+            </div>
+
+          
+            <!-- Outros cards de prestadores aparecerão dinamicamente -->
+        </section>
+        <a href="PerfilPrestador.html">
+            <div id="bubble">
+                <img src="assets/img/user.png" alt="icone-usuário" title="fazer-login">
+            </div>
+        </a>
+    </main>
+</body>
+</html>
