@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Serviços</title>
+    <link rel="stylesheet" href="assets/css/solicitacao.css">
+</head>
+<body>
+    <!-- INÍCIO - CABEÇALHO -->
+    <header id="menu-header1">
+        <!-- Logotipo alinhado à esquerda -->
+        <div class="menu-logo1">
+            <a href="index.html">
+                <img src="assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <!-- Menu de navegação alinhado à direita -->
+        <nav id="menu-navbar1" class="menu-navbar1">
+            <ul>
+                <li><a class="active" href="FormBuscarPrestador.html">Buscar</a></li>
+                <li><a href="Servicos.html">Serviços</a></li>
+                <li><a href="CadUsuario.html">Crie sua conta</a></li>
+                <li><a href="Login.html">Entre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIM - CABEÇALHO -->
+
+
+    <!-- Container Principal -->
+    <main class="container">
+        <h1>Cadastro de Solicitação de Serviços</h1>
+        
+        <form id="form-solicitacao" enctype="multipart/form-data">
+            <!-- Categoria do Serviço -->
+            <div class="form-group">
+                <label for="categoria">Categoria do Serviço*</label>
+                <select id="categoria" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="Eletricista">Eletricista</option>
+                    <option value="Encanador">Encanador</option>
+                    <option value="Faxina">Faxina</option>
+                    <option value="Jardinagem">Jardinagem</option>
+                </select>
+            </div>
+
+            <!-- Descrição Detalhada -->
+            <div class="form-group">
+                <label for="descricao">Descrição Detalhada*</label>
+                <textarea id="descricao" rows="5" placeholder="Descreva os detalhes do serviço" required></textarea>
+            </div>
+
+            <!-- Endereço ou Localização -->
+            <div class="form-group">
+                <label for="endereco">Endereço de Prestação do Serviço*</label>
+                <input type="text" id="endereco" placeholder="Digite o endereço completo" required>
+                <button type="button" id="btn-localizacao">Capturar Localização</button>
+            </div>
+
+            <!-- Data e Hora -->
+            <div class="form-group">
+                <label for="data">Data de Execução*</label>
+                <input type="date" id="data" required>
+            </div>
+            <div class="form-group">
+                <label for="hora">Horário de Execução*</label>
+                <input type="time" id="hora" required>
+            </div>
+
+            <!-- Orçamento Estimado -->
+            <div class="form-group">
+                <label for="orcamento">Orçamento Estimado (Opcional)</label>
+                <input type="number" id="orcamento" placeholder="Ex.: 200,00">
+            </div>
+
+            <!-- Upload de Imagens -->
+            <div class="form-group">
+                <label for="imagens">Imagens (Opcional, Máx. 3)</label>
+                <input type="file" id="imagens" accept="image/*" multiple>
+            </div>
+
+            <!-- Botão de Submissão -->
+            <button type="submit" id="btn-enviar">Cadastrar Solicitação</button>
+        </form>
+    </main>
+
+    <!-- Script JS -->
+    <script src="assets/js/solicitacao_servico.js"></script>
+</body>
+</html>
