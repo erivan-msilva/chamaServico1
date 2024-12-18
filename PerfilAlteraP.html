@@ -4,64 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Dados-Prestador </title>
-    <!-- Carregamento de fontes do Google -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,500,600,700" rel="stylesheet">
-      <!-- Vendor CSS Files -->
-  <!--Links-->
-  
+ <!-- Estilos -->
+ <style>
+    /* Reset básico */
+    * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: Arial, sans-serif;
+   }
+   /* Título */
+h1, h2 {
+text-align: center;
+color: #6648EF;
+}
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f8f9fa;
+   color: #333;
+}
+ /* Menu Superior */
+ .menu-topo {
+   background-color:#6648EF;
+   color:#ffffff; /*cor do nome chamaServiço*/
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 50px;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+}
 
+.menu-topo a {
+   color: #ffffff;
+   text-decoration: none;
+   margin: 0 10px;
+   font-weight: bold;
+}
 
-      <!-- Arquivo CSS principal do template -->
-  <link href="assets/css/stylePrincipal.css" rel="stylesheet">
+.menu-topo a:hover {
+   color:#dcbee7;
+   text-decoration: rgb(0, 10, 4);
+}
+
+/* Menu Lateral */
+.menu-lateral {
+   background-color: #f4f4f4;
+   width: 250px;
+   height: 100vh;
+   position: fixed;
+   top: 40px; /* abaixo do menu superior */
+   left: 3;
+   padding: 30px;
+   box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-lateral h3 {
+   margin-bottom: 20px;
+   font-size: 18px;
+   color:#3c3c5f
+}
+
+.menu-lateral a {
+   display: block;
+   color: #5c2d91;
+   text-decoration: none;
+   padding: 10px 0;
+   font-weight: bold;
+}
+
+.menu-lateral a:hover {
+   color: #6648EF;
+}
+h1 {
+   text-align: center;
+   color: #5c2d91;
+   margin-top: 20px;
+}
+input[type="file"]::file-selector-button {
+    background-color: #6a2c7c; /* Cor roxa do layout */
+    color: #fff; /* Cor do texto */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #572264; /* Tom roxo mais escuro ao passar o mouse */
+}
+/* Estilos do formulário */
+form.form-editar {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+}
+.form-group label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin: 20px 0;
+}
+table th, table td {
+   border: 1px solid #ddd;
+   padding: 10px;
+   text-align: center;
+}
+table th {
+   background-color: #5c2d91;
+   color: #fff;
+}
+table td {
+   background-color: #f9f9f9;
+}
+button {
+   padding: 8px 12px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   color: #fff;
+   font-weight: bold;
+   background-color: #5c2d91;
+}
+button:hover {
+   background-color: #452176;
+}
+.exportar-btn {
+   display: block;
+   margin: 10px auto;
+   background-color: #6a2c7c;
+}
+.adicionar-cartao{
+    border-color: #6a2c7c; /* Cor roxa ao focar */
+    box-shadow: 0 0 5px rgba(106, 44, 124, 0.2);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.remover{
+    background-color: #6a2c7c; /* Cor roxa do layout */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.btn btn-primary{
+    background-color: #6a2c7c; /* Cor roxa do layout */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #6a2c7c; /* Cor roxa ao focar */
+    box-shadow: 0 0 5px rgba(106, 44, 124, 0.2);
+}
+
+/* Rodapé */
+.rodape {
+   text-align: center;
+   padding: 10px;
+   background-color:#6648EF;
+   color: #fff;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   object-fit: cover;
+}
+</style>
 </head>
 <body>
-    <!-- INÍCIO - CABEÇALHO -->
-    <header id="header">
-        <!-- Logotipo alinhado à esquerda -->
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/img/logo.png" alt="logo">
-            </a>
-        </div>
+ <!-- Menu Superior -->
+ <div class="menu-topo">
+    <div>ChamaServiço</div>
+    <div>
+        <a href="FormBuscarPrestador.html">Buscar</a>
+        <a href="FormBuscarPrestador.html">Serviços</a>
+        <a href="PerfilAlteraP.html">Atualizar Dados</a>
+    </div>
+</div>
 
-        <!-- Menu de navegação alinhado à direita -->
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="Servicos.html">Serviços</a></li>
-                <li><a href="CadUsuario.html">Crie sua conta</a></li>
-                <li><a href="Login.html">Entre</a></li>
-             
-                
-            </ul>
-        </nav>
-    </header>
-    <!-- FIM - CABEÇALHO -->
+<!-- Menu Lateral -->
+<div class="menu-lateral">
+    <h3>Minha Conta</h3>
+    <a href="FormBuscarPrestador.html">Buscar</a>
+    <a href="ServicosRealizados.html">Serviços Realizados</a>
+    <a href="Faturamento.html">Faturamento</a>
+    <a href="PerfilPrestador.html">Meu Perfil</a>
+    <a href="Suporte.html">Suporte Técnico</a>
+    <a href="Login.html">Sair</a>
+</div>
 
-    <!-- INÍCIO - CONTAINER PRINCIPAL -->
-    <div class="container">
-        <!-- Menu lateral -->
-        <aside class="menu">
-            <h2>Minha Conta</h2>
-            <nav>
-                <ul>
-                    <li><a href="#">Compras</a></li>
-                    <li><a href="#">Vendas</a></li>
-                    <li><a href="#">Empréstimos</a></li>
-                    <li><a href="#">Assinaturas</a></li>
-                    <li><a href="#">Faturamento</a></li>
-                    <li><a href="#">Meu Perfil</a></li>
-                    <li><a href="#">Configurações</a></li>
-                    <li><a href="index.html">Sair</a></li>
-                </ul>
-            </nav>
-        </aside>
-
+   
         <!-- Conteúdo principal -->
        
-        <main class="conteudo">
+        <main class="container">
             <p>*Edite o seu Cadastro</p>
             <div class="perfil">
+                
                 <img src="assets/img/fotoPerfil.png" alt="Foto do Perfil">
             </div>
             <form action="#" method="post" class="form-editar">

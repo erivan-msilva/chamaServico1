@@ -1,4 +1,4 @@
-document.getElementById('form-solicitacao').addEventListener('submit', function(event) {
+document.getElementById('form-servicos').addEventListener('submit', function(event) {
     event.preventDefault();
     
     // Captura dos valores dos campos

@@ -15,7 +15,7 @@
         /* Título */
 h1, h2 {
     text-align: center;
-    color: #6a2c7c;
+    color: #6648EF;
 }
 
         .container {
@@ -29,11 +29,11 @@ h1, h2 {
 
         /* Menu Superior */
         .menu-topo {
-            background-color: #5c2d91;
-            color: #fff;
+            background-color:#6648EF;
+            color:#ffffff; /*cor do nome chamaServiço*/
             display: flex;
             justify-content: space-between;
-            padding: 10px 20px;
+            padding: 10px 50px;
             position: fixed;
             width: 100%;
             top: 0;
@@ -41,14 +41,15 @@ h1, h2 {
         }
 
         .menu-topo a {
-            color: #ffb94a;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
         }
 
         .menu-topo a:hover {
-            color: #fff;
+            color:#dcbee7;
+            text-decoration: rgb(0, 10, 4);
         }
 
         /* Menu Lateral */
@@ -57,15 +58,16 @@ h1, h2 {
             width: 250px;
             height: 100vh;
             position: fixed;
-            top: 50px; /* abaixo do menu superior */
-            left: 0;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            top: 40px; /* abaixo do menu superior */
+            left: 3;
+            padding: 30px;
+            box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         .menu-lateral h3 {
             margin-bottom: 20px;
             font-size: 18px;
+            color:#3c3c5f
         }
 
         .menu-lateral a {
@@ -77,22 +79,22 @@ h1, h2 {
         }
 
         .menu-lateral a:hover {
-            color: #ffb94a;
+            color: #6648EF;
         }
 
         /* Conteúdo Central */
         .conteudo {
-            margin-left: 270px; /* espaço para o menu lateral */
+            margin-left:500px; /* espaço para o menu lateral */
             margin-top: 70px; /* espaço para o menu superior */
             padding: 20px;
             text-align: center;
         }
 
         .conteudo h1 {
-            color: #5c2d91;
+            color:#6648EF;
             margin-bottom: 20px;
         }
-
+                /* Buscar Prestador de Serviço */
         .form-suporte {
             max-width: 500px;
             margin: 0 auto;
@@ -104,7 +106,7 @@ h1, h2 {
 
         .form-suporte label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 2px;
             font-weight: bold;
             color: #333;
             text-align: left;
@@ -112,6 +114,7 @@ h1, h2 {
 
         .form-suporte input, .form-suporte textarea {
             width: 100%;
+            color: #452176;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
@@ -130,7 +133,7 @@ h1, h2 {
         }
 
         .form-suporte button:hover {
-            background-color: #452176;
+            background-color: #6648EF;
         }
       /* Formulário de Filtros */
 .form-filtros {
@@ -139,8 +142,8 @@ h1, h2 {
     gap: 30px;
     justify-content: center;
     max-width: 1000px;
-            margin: 10px auto;
-            padding: 20px;
+    margin: 10px auto;
+     padding: 20px;
 }
 
 .filtro-item {
@@ -208,23 +211,24 @@ h1, h2 {
         .rodape {
             text-align: center;
             padding: 10px;
-            background-color: #5c2d91;
+            background-color:#6648EF;
             color: #fff;
             position: fixed;
             bottom: 0;
             width: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
    
-    <!-- Menu Superior -->
-    <div class="menu-topo">
+     <!-- Menu Superior -->
+     <div class="menu-topo">
         <div>ChamaServiço</div>
         <div>
-            <a href="">Buscar</a>
-            <a href="#">Serviços</a>
-            <a href="#">Atualizar Dados</a>
+            <a href="FormBuscarPrestador.html">Buscar</a>
+            <a href="FormBuscarPrestador.html">Serviços</a>
+            <a href="PerfilAlteraP.html">Atualizar Dados</a>
         </div>
     </div>
 
@@ -232,22 +236,21 @@ h1, h2 {
     <div class="menu-lateral">
         <h3>Minha Conta</h3>
         <a href="FormBuscarPrestador.html">Buscar</a>
-        <a href="FormBuscarPrestador.html">Serviços Realizados</a>
-        <a href="Pagamento.html">Forma de Recebimento</a>
-        <a href="#">Faturamento</a>
+        <a href="ServicosRealizados.html">Serviços Realizados</a>
+        <a href="Faturamento.html">Faturamento</a>
         <a href="PerfilPrestador.html">Meu Perfil</a>
         <a href="Suporte.html">Suporte Técnico</a>
         <a href="Login.html">Sair</a>
     </div>
-
    
 
      <!-- Container Principal -->
      <main class="container">
-        <h1>Buscar Prestadores e Serviços</h1>
+        
         <div class="form-suporte">
         <!-- Filtros -->
         <form id="filtro-servicos" class="form-filtros">
+            <h1>Buscar Prestadores e Serviços</h1>
             <div class="filtro-item">
                 <label for="localizacao">Localização:</label>
                 <input type="text" id="localizacao" placeholder="Bairro, Cidade ou Raio geográfico">
@@ -278,7 +281,7 @@ h1, h2 {
             <div class="filtro-item">
                 <label for="servico">Serviço:</label>
                 <input type="text" id="servico" placeholder="Nome do Serviço">
-                <button class="btn-detalhes">Filtrar</button>
+                <button >Filtrar</button>
             </div>
             
            
