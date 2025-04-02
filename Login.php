@@ -30,36 +30,34 @@
         </div>
 
         <div class="box-login">
+        <form action="index.php" method="post">
             <h1>
                 Olá!<br>
                 Seja bem-vindo de volta.
             </h1>
 
             <div class="box">
-                <h2>faça o seu login agora</h2>
-                <input type="text" name="username" id="username" placeholder="E-mail">
-                <input type="password" name="password" id="password" placeholder="Senha">
                 
-                <a href="password.html">
+                <h2>faça o seu login agora</h2>
+                
+                <input type="email" name="username" id="typeEmailX-2" placeholder="E-mail">
+                <input type="password" name="password" id="typePasswordX-2" placeholder="Senha">
+                
+                <a href="Recuperar.php">
                     <p>Esqueceu a sua senha?</p>
                 </a>
 
                 <button>Login</button>
                 
-                <a href="CadUsuario.html">
+                <a href="CadPessoa.php">
                     <p>Criar uma conta</p>
                 </a>
-
-                <div class="social">
-                    <img src="assets/img/facebook.png" alt="facebook">
-                    <img src="assets/img/google.png" alt="google">
-                    <img src="assets/img/twitter.png" alt="twitter">
-                    <img src="assets/img/github.png" alt="github">
-                </div>
+                </form>
+                
             </div>
         </div>
     </div>
-    <a href="index.html">
+    <a href="index.php">
       <div id="bubble">
           <img src="assets/img/user.png" alt="icone-usuário" title="fazer-login">
       </div>

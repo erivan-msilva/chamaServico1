@@ -7,17 +7,17 @@
     <title>Criar conta </title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="assets/css/styleLogin.css">
-    <link rel="stylesheet" href="assets/css/mediaLogin.css">
+    <link rel="stylesheet" href="../assets/css/styleLogin.css">
+    <link rel="stylesheet" href="../assets/css/mediaLogin.css">
 
     <!--JS & jQuery-->
-    <script type="text/javascript" src="assets/js/scriptLogin.js"></script>
+    <script type="text/javascript" src="../assets/js/scriptLogin.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="container">
         <div class="banner">
-            <img src="assets/img/login.png" alt="imagem-login">
+            <img src="../assets/img/login.png" alt="imagem-login">
             <p style="color: #fff;">
                 Seja bem vindo, acesse e aproveite todo o conteúdo,
                 <br>somos uma equipe de profissionais empenhados em

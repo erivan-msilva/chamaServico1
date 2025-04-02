@@ -43,7 +43,7 @@
                     recuperar
                 </p>
 
-                <button>Obter o código</button>
+                <button>Enviar</button>
             </div>
         </div>
     </div>

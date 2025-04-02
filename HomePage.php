@@ -35,7 +35,7 @@
       <!-- INÍCIO - LOGO -->
       <div class="logo">
         <h1 class="text-light">
-          <a href="index.html">
+          <a href="index.php">
             <img src="assets/img/logo.png" alt="logo">
           </a>
         </h1>
@@ -44,12 +44,12 @@
       <!-- INÍCIO - BARRA DE NAVEGAÇÃO -->
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
+          <li><a class="active" href="index.php">Home</a></li>
       
           </li>
-          <li><a href="Servicos.html">Serviços</a></li>
-          <li><a href="CadUsuario.html">Crie sua conta</a></li>
-          <li><a href="Login.html">Entre</a> </li>
+          <li><a href="Servicos.php">Serviços</a></li>
+          <li><a href="CadUsuario.php">Crie sua conta</a></li>
+          <li><a href="Login.php">Entre</a> </li>
 
           
         </ul>
@@ -222,7 +222,7 @@
       </div>
       <div class="container">
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li>Projetos</li>
         </ol>
       </div>
