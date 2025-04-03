@@ -9,10 +9,8 @@ class Pessoa extends Conexao
     private $id_pessoa;
     private $nome;
     private $email;
-    private $id_status_usuario;
-    private $documento_usuario;
     private $data_nascimento;
-    private $data_cadastro;
+    private $documento_usuario;
     private $data_inativacao;
     private $telefone;
     private $senha;

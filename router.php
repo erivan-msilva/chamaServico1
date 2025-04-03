@@ -11,7 +11,7 @@ if (isset($pagina)) {
 }
 ##ROTAS DE AÇÃO
 //verifica se o botao login foi acionado -login - isset direciona o que deve ser exibido para o usuário
-if (isset($_POST['login'])) {
+if (isset($_POST['Login'])) {
     //instanciar controller
     $objController = new Controller();
     //dados

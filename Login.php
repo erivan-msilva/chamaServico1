@@ -40,8 +40,8 @@
                 
                 <h2>faça o seu login agora</h2>
                 
-                <input type="email" name="username" id="typeEmailX-2" placeholder="E-mail">
-                <input type="password" name="password" id="typePasswordX-2" placeholder="Senha">
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
                 
                 <a href="Recuperar.php">
                     <p>Esqueceu a sua senha?</p>

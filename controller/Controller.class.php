@@ -58,7 +58,7 @@ class Controller
             //$senha = md5(substr(md5(date("YmdHis")), 1, 6));
 
             //atualizar senha
-            $P->alterarSenha($email, $senha);
+            $objPessoa->alterarSenha($email, $senha);
 
             //definir o servidor
             define('HOST', 'smtp.gmail.com');
